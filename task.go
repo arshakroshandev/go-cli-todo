@@ -20,7 +20,7 @@ func addTask(name string) {
 }
 
 func markTaskDone(index int) {
-	if index < 0 || index > len(tasks) {
+	if index < 0 || index >= len(tasks) {
 		fmt.Println("Invalid task number")
 		return
 	}
@@ -31,7 +31,7 @@ func markTaskDone(index int) {
 }
 
 func deleteTask(index int) {
-	if index < 0 || index > len(tasks) {
+	if index < 0 || index >= len(tasks) {
 		fmt.Println("Invalid task number")
 		return
 	}
